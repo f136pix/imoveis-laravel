@@ -3,6 +3,7 @@
 use App\Http\Controllers\ListaController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Lista;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,10 +15,23 @@ use App\Models\Lista;
 |
 */
 
+// main page
 Route::get('/', [ListaController::class, 'index']);
 
-                                 // url param
-Route::get('/oportunidade/{id}', [ListaController::class, 'show']);
-    
-   
+// render form 
+Route::get('/oportunidades/criar', [ListaController::class, 'create']);
+
+// store item
+Route::post('/oportunidades', [ListaController::class, 'store']);
+
+// edit item page
+Route::get('/oportunidades/{id}/edit', [ListaController::class, 'edit']);
+
+// update item
+Route::put('oportunidades/{id}', [ListaController::class, 'update']);
+
+// unico item          // url param
+Route::get('/oportunidades/{id}', [ListaController::class, 'show']);
+
+
 

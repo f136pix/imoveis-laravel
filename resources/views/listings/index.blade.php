@@ -13,7 +13,9 @@
 
  @endforeach
     
-
 </div>
 
+<div class="mt-6 p-4">
+    {{$lista->links()}} <!-- exibir menu de pagination -->
+</div>
 @endsection

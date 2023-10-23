@@ -10,6 +10,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -24,10 +25,15 @@
     <title>LaraGigs | Find Laravel Jobs & Projects</title>
 </head>
 
+
 <body class="mb-48">
+    <div class="flex justify-center items-center z-0"> 
+        <x-flash-message />
+    </div>
     <nav class="flex justify-between items-center mb-4">
+        
         <a href="/"><img class="w-24" src="{{ asset('images/logo.png') }}" alt="" class="logo" /></a>
-        <ul class="flex space-x-6 mr-6 text-lg">
+        <ul class="flex space-x-6 mr-6 text-lg z-10">
             <li>
                 <a href="register.html" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i> Register</a>
             </li>
@@ -42,9 +48,9 @@
     </main>
     <footer
         class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center">
-        <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
-        <a href="create.html" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">
-            Post Job
+        <p class="ml-2"><a href="https://github.com/f136pix">github.com/f136pix</a></p>
+        <a href="oportunidades/criar" class="absolute top-1/3 right-10 bg-black text-white py-2 px-5">
+            Postar Vaga
         </a>
     </footer>
 </body>

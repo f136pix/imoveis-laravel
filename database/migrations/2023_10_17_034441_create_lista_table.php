@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -14,16 +13,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('listas', function (Blueprint $table) {
-        $table->id();
-        $table->string('titulo');
-        $table->string('tags');
-        $table->string('local');
-        $table->string('empresa');
-        $table->string('email');
-        $table->string('website');
-        $table->longText('descricao');
-        $table->timestamps();
-    });
+            $table->id();
+            $table->string('titulo');
+            $table->string('tags');
+            $table->string('local');
+            $table->string('empresa');
+            $table->string('email');
+            $table->string('website');
+            $table->longText('descricao');
+            $table->string('logo')->nullable(); // pode ser null
+            $table->timestamps();
+        });
         //
     }
 
