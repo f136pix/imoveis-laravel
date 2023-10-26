@@ -42,6 +42,7 @@ class ListaController extends Controller
             'descricao' => 'required',
         ]);
 
+
         if (request()->hasFile('logo')) {
             $formFields['logo'] = request()->file('logo')->store('logos', 'public'); // armazenando o .png do logo no server
         }
