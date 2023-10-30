@@ -17,7 +17,7 @@ class ListaController extends Controller
         // request()->tag
         return view('listings.index', [
             'lista' => Lista::latest() // ordenando por created_at
-                ->filter(request(['tag', 'search'])) //  parametrizando $filters em scopeFilters com request(['tag', 'search']) 
+                ->filter(request(['tag', 'search'])) //  parametrizando $filters em scopeFilters com request(['tag', 'search'])
                 ->paginate(10) // pagination com 10 elementos por pagina
         ]);
     }
@@ -50,7 +50,7 @@ class ListaController extends Controller
         Lista::create($formFields);
 
         // mesmo que redirect()->with()
-        // Session::flash('message', 'Vaga postada'); 
+        // Session::flash('message', 'Vaga postada');
 
         return redirect('/')->with('message', 'Vaga publicada com sucesso');
     }
@@ -78,7 +78,7 @@ class ListaController extends Controller
             $formFields['logo'] = request()->file('logo')->store('logos', 'public');
         }
 
-        return redirect('/')->with('message', 'Vaga publicada com sucesso');
+        return back()->with('message', 'Vaga atualizada com sucesso !');
 
     }
 
