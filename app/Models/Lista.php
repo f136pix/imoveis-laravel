@@ -25,13 +25,13 @@ class Lista extends Model
 
 
 
-        /* 
-        $filters = req url params       
+        /*
+        $filters = req url params
         */
 
         if ($filters["tag"] ?? false) { // if filters[tag] != null
             $query
-                ->where('tags', 'like', '%' . request('tag') . '%'); // select column onde where 'is like' url param tag
+                ->where('tags', 'like', '%' . request('tag') . '%'); // select column where 'is like' url param tag
         }
 
         if ($filters["search"] ?? false) { // if filters[search] != null

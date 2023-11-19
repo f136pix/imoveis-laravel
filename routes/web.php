@@ -18,7 +18,7 @@ use App\Models\Lista;
 // main page
 Route::get('/', [ListaController::class, 'index']);
 
-// render form 
+// render form
 Route::get('/oportunidades/criar', [ListaController::class, 'create']);
 
 // store item
@@ -30,8 +30,15 @@ Route::get('/oportunidades/{id}/edit', [ListaController::class, 'edit']);
 // update item
 Route::put('oportunidades/{id}', [ListaController::class, 'update']);
 
+// delete iten
+Route::delete('oportunidades/{id}', [ListaController::class, 'destroy']);
+
 // unico item          // url param
 Route::get('/oportunidades/{id}', [ListaController::class, 'show']);
+
+// render register form
+Route::get('/register', [UserController::class], 'create');
+
 
 
 

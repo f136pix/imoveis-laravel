@@ -25,6 +25,7 @@ class ListaController extends Controller
     // GET oportunidades/criar
     public function create()
     {
+
         return view('listings.create');
 
     }
@@ -78,8 +79,16 @@ class ListaController extends Controller
             $formFields['logo'] = request()->file('logo')->store('logos', 'public');
         }
 
+        $id->update($formFields);
+
         return back()->with('message', 'Vaga atualizada com sucesso !');
 
+    }
+
+    // DELETE oportunidades/{id}
+    public function destroy(Lista $id) {
+        $id->delete();
+        return redirect('/')->with('message', 'Oportunidade removida');
     }
 
     // GET oportunidades/{id}
