@@ -81,7 +81,7 @@ class ListaController extends Controller
 
         $id->update($formFields);
 
-        return back()->with('message', 'Vaga atualizada com sucesso !');
+        return back()->with('message', 'Imovel atualizado com sucesso !');
 
     }
 

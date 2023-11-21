@@ -6,7 +6,7 @@
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Criar um Anuncio
             </h2>
-            <p class="mb-4">Poste uma oportunidade de trabalho !</p>
+            <p class="mb-4">Poste seu imovel disponivel !</p>
         </header>
 
         <form action="/oportunidades" method="POST" enctype="multipart/form-data">
@@ -76,7 +76,7 @@
                     Logo da Emrpesa
                 </label>
                 <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo" />
-            </div> 
+            </div>
             @error('logo')
                 <p class="text-red-500 text-xs mb-3 mb-">{{ $message }}</p>
             @enderror
@@ -95,7 +95,7 @@
             @enderror
 
             <div class="mb-1">
-                <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
+                <button class="bg-black text-white rounded py-2 px-4">
                     Criar Anuncio
                 </button>
 

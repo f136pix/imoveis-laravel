@@ -7,7 +7,7 @@
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Editar um anuncio
             </h2>
-            <p class="mb-4">Vaga: {{ $item->titulo }}</p>
+            <p class="mb-4">Anuncio: {{ $item->titulo }}</p>
         </header>
 
         <form action="/oportunidades/{{ $item->id }}" method="POST" enctype="multipart/form-data">
@@ -80,7 +80,7 @@
                 </label>
                 <input type="file" class="border border-gray-200 rounded p-2 w-full" name="logo"/>
                 <img class="w-48 mr-6 mb-6" src="{{ $item->logo ? asset('storage/'.$item->logo) : asset('/images/no-image.png') }}" alt="" />
-            </div> 
+            </div>
             @error('logo')
                 <p class="text-red-500 text-xs mb-3 mb-">{{ $message }}</p>
             @enderror
@@ -94,13 +94,13 @@
                    {{ $item->descricao }}
                 </textarea>
             </div>
-            
+
             @error('descricao')
                 <p class="text-red-500 text-xs mb-1">{{ $message }}</p>
             @enderror
 
             <div class="mb-1">
-                <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
+                <button class="bg-black text-white rounded py-2 px-4">
                     Salvar alterações
                 </button>
 

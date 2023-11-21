@@ -32,7 +32,8 @@
                         </p>
 
                         <a href="mailto:{{ $item->email }}"
-                            class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80"><i
+                            class="block text-white mt-6 py-2 rounded-xl hover:opacity-80"
+                            style="background-color:  #0275d8"><i
                                 class="fa-solid fa-envelope"></i>
                             Contact Employer</a>
 
