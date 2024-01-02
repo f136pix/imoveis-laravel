@@ -53,7 +53,7 @@ class ListaController extends Controller
         // mesmo que redirect()->with()
         // Session::flash('message', 'Vaga postada');
 
-        return redirect('/')->with('message', 'Vaga publicada com sucesso');
+        return redirect('/')->with('message', 'Imovel publicado com sucesso');
     }
 
     // GET oportundidades/{id}/edit
