@@ -1,4 +1,4 @@
-<p> site para anuncio e visualização de imoveis, cosntrudo ultilizando laravel e blade templates</p>
+<p> site para anuncio e visualização de imoveis, cosntruido ultilizando laravel e blade templates</p>
 <p> crud ultilizando eloquent orm em um banco mysql</p>
 
 
